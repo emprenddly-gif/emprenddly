@@ -1,0 +1,124 @@
+body {
+  margin-top: 130px;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right, #809fe1, #6c557a);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(to right, #6c557a, #809fe1);
+  border-radius: 10px;
+}
+
+.p {
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0c2be;
+  color: #000000;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-100%);
+  cursor: alias;
+  color: #000000;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: linear-gradient(to right, #809fe1, #6c557a);
+  height: 65px;
+  box-shadow: 0 3px 5px rgba(26, 21, 21, 0.2);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+}
+
+.barra-superior .logo {
+  height: 87px;
+  margin-left: 85%;
+  padding: 0 0;
+}
+
+.registro a {
+  color: #6c557a;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.registro a:hover {
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.loginBtn {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  background-color: #e6d6ad;
+  color: rgb(0, 0, 0);
+}
+
+.loginBtn:hover {
+  background-color: #dabdbd;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0c2be;
+  color: #000000;
+}

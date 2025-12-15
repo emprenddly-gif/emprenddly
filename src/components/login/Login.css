@@ -1,0 +1,125 @@
+body {
+  margin-top: 130px;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right, #f0c2be, #f0e1bc);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(to right, #f0e1bc, #f0c2be);
+  border-radius: 10px;
+}
+
+.p {
+  text-align: center;
+  background-color: linear-gradient(to right, #f0e1bc, #f0c2be);
+  color: #3f3d3d;
+  font-size: 30px;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #809fe1;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6c557a;
+  color: rgb(255, 254, 254);
+  cursor: pointer;
+  width: 100%;
+}
+
+::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-100%);
+  cursor: alias;
+  color: #f5f5f5;
+}
+
+#togglePassword::after {
+  content: none !important;
+}
+
+/* Barra superior */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: linear-gradient(to right, #f4c3d2, #dacfb1);
+  height: 65px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+}
+
+.barra-superior .logo {
+  height: 87px;
+  align-items: center;
+  margin-left: 85%; /* Esto empuja el logo hacia la derecha */
+  padding: 0 0;
+}
+
+.recuperar,
+.registro {
+  font-size: 14px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.recuperar a,
+.inicio a {
+  color: #6c557a; /* color a juego con tu diseño */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.recuperar a:hover,
+.inicio a:hover {
+  text-decoration: underline;
+  font-size: 16px;
+}
+

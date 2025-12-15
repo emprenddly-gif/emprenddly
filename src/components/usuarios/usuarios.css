@@ -1,0 +1,367 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #cadbec,#F5f6f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* cuadro de perfil */
+.contenedor {
+  max-width: 400px;
+  margin: auto;
+ background: linear-gradient(to right, #33348a #6c557a);
+  padding: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+/*cuadro del perfil tamaño*/
+form label {
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+}
+/* cuadro donde se llena informacion*/
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  background: #b6a999;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+/* guardas cambios*/
+.btn-eliminar {
+  background-color: #809fe1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* volver a justes*/
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background: #809fe1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+/* boton cambio de color a lo que se utliza*/
+.btn-volver:hover {
+  background: #4b6682;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #b9a8c4 ;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: linear-gradient(to right, #e5ded3, #b6a999);
+  height: 65px;
+  box-shadow: 0 3px 5px #e5ded3;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 82%;
+}
+
+.barra-superior .logo {
+  height: 87px;
+  margin-left: 92%; /* Esto empuja el logo hacia la derecha */
+  margin-top: -15px; 
+  padding: 0 0;
+}
+
+
+
+.Menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;  /* en lugar de absolute */
+    top: 0;           /* pegado arriba */
+    left: 0;          /* pegado a la izquierda */
+    background: linear-gradient(to bottom, #f5f6f7,#b6a999 , #cadbec);
+    transition: 0.5s ease;
+    transform: translateX(-200px);
+    font-size: 20px;
+    margin-top: 0;    /* quita el desplazamiento negativo */
+    z-index: 999;     /* asegura que esté sobre el contenido */
+}
+
+
+h1{
+ color: #6C557A;
+ font-weight: 800;
+ text-align: right;
+ padding: 10px 0;
+ padding-right: 30px;
+ pointer-events: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    color: #6C557A;
+    font-weight: 500;
+    padding: 9px 0;
+    display: flex;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    gap: 10px;
+    font-size: 20px;
+}
+
+ul li:hover a{
+    color: #f0c2be;
+    background-color: #6C557A;
+}
+
+ul li a i{
+    color: #6C557A;
+    min-width: 25px;
+    text-align: center;
+}
+
+
+.lineas-check{
+    display: none;
+}
+
+
+.Lineas{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6D6AD;
+    box-shadow: 0 0 10px #6C557A;
+}
+
+.Lineas .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #6C557A;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.Lineas .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Lineas .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.Lineas .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+input:checked ~ .Lineas .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .Lineas .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+
+input:checked ~ .Lineas .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+input:checked ~.Menu{
+    transform: translateX(0);
+    box-shadow: 0 0 15px #6C557A;
+}
+/*DEMAS*/ 
+
+.Titulo{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #f0c2be;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px, #6C557A 0 0 1em, #6C557A 0 0 0.2em;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #411e02;
+    margin: 10px 0;
+    height: 2px;
+    margin-bottom: 20px;
+}
+
+.Container{
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(to right, #6c557a, #f0c2be);
+    border-radius: 10px;
+    margin-top: 40px ;
+}
+
+
+.Explicacion{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    margin-top: 20px;
+}
+
+.Botones a{
+    height: 40px;
+    font-size: 28px;
+    width:40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 25%;
+    background-color: #e5ded3;
+    color: #76357c; 
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px #6C557A; 
+}
+.contenedor {
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ================= NUEVOS BOTONES ================= */
+
+/* Botón Guardar cambios */
+.btn-guardar {
+  background-color: #bbab92 ;/* verde */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+  background-color: #bbab92; /* verde más oscuro */
+}
+
+/* Botón Eliminar cuenta */
+.btn-Eliminar {
+  background-color: #bbab92; /* rojo */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-Eliminar:hover {
+  background-color: #bbab92 /* rojo más oscuro */
+}
+
+/* ================= BOTÓN CERRAR SESIÓN ================= */
+.btn-cerrar {
+  background-color: #bbab92; /* naranja */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cerrar:hover {
+  background-color: #f4e1b6; /* naranja más oscuro */
+}
+  
+
+/* -------------------- Botón hamburguesa (AJUSTADO) -------------------- */
+.Lineas {
+    /* CLAVE: Cambiado de absolute a fixed para que flote sobre todo */
+    position: fixed; 
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 20px; /* Separado de la esquina */
+    z-index: 1100; /* CLAVE: El z-index MÁS ALTO */
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6D6AD;
+    box-shadow: 0 0 10px #6C557A;
+}
+
+/* El resto de estilos de .Lineas y sus spans (top_line, middle_line, bottom_line) se mantienen */
+
+
+/* -------------------- Botón hamburguesa (AJUSTADO) -------------------- */
+.Lineas {
+    /* CLAVE: Cambiado de absolute a fixed para que flote sobre todo */
+    position: fixed; 
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 20px; /* Separado de la esquina */
+    z-index: 1100; /* CLAVE: El z-index MÁS ALTO */
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6D6AD;
+    box-shadow: 0 0 10px #6C557A;
+}
+
+/* El resto de estilos de .Lineas y sus spans (top_line, middle_line, bottom_line) se mantienen */

@@ -1,0 +1,234 @@
+/* -------------------- Reset -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- Body (AJUSTADO) -------------------- */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6C557A, #F0C2BE);
+    /* Se eliminan las propiedades de centrado para no interferir con elementos fijos */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+/* -------------------- Barra superior (AJUSTADA) -------------------- */
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    background: linear-gradient(to right, #F0C2BE, #6C557A);
+    height: 65px;
+    box-shadow: 0 3px 5px #76357c;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* CLAVE: Ahora cubre todo el ancho */
+    z-index: 1000;
+}
+
+.barra-superior .logo {
+    height: 60px; /* Reducido para que quepa */
+    margin-left: auto; /* Empuja el logo a la derecha (si hay otro elemento a la izq) */
+    margin-top: 0;
+}
+
+/* -------------------- Menú lateral -------------------- */
+.Menu {
+    height: 100%;
+    width: 220px; /* Ancho ajustado a 220px para ser consistente con tu otro componente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #f5f6f7,#b6a999 , #cadbec);
+    transition: 0.5s ease;
+    transform: translateX(-220px); /* Escondido por su propio ancho */
+    font-size: 20px;
+    z-index: 999;
+}
+
+.Menu h1 {
+    color: black;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 30px 10px 0;
+    pointer-events: none;
+}
+
+.Menu ul li {
+    list-style: none;
+}
+
+.Menu ul li a {
+    color: #6C557A;
+    font-weight: 500;
+    padding: 9px 0;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s ease-out;
+}
+
+.Menu ul li:hover a {
+    color: #f0c2be;
+    background-color: #6C557A;
+}
+
+/* -------------------- Botón hamburguesa -------------------- */
+.lineas-check {
+    display: none;
+}
+
+.Lineas {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6D6AD;
+    box-shadow: 0 0 10px #6C557A;
+}
+
+.Lineas .common {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #6C557A;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.Lineas .top_line {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Lineas .middle_line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Lineas .bottom_line {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .Lineas .top_line,
+.rotate-down { /* Agregadas clases de React */
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .Lineas .bottom_line,
+.rotate-up { /* Agregadas clases de React */
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .Lineas .middle_line,
+.hidden { /* Agregadas clases de React */
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+input:checked ~ .Menu,
+.Menu.open { /* CLAVE: Agregada la clase 'open' para que funcione con React */
+    transform: translateX(0);
+    box-shadow: 0 0 15px #6C557A;
+}
+
+/* -------------------- Contenedor de perfil (AJUSTADO: Más pequeño y centrado) -------------------- */
+.contenedor {
+    max-width: 400px; /* Tamaño máximo más compacto */
+    width: 90%; /* Asegura que se vea bien en móviles */
+    margin: 0 auto; /* CLAVE: Centra horizontalmente */
+    margin-top: 100px; /* Baja el contenedor por debajo de la barra superior */
+    margin-bottom: 20px; /* Añade espacio al final */
+    background: linear-gradient(to right, #b6a999, #e5ded3);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
+}
+
+.contenedor h2 {
+    margin-bottom: 20px;
+}
+
+/* -------------------- Formularios -------------------- */
+form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #f4e1b6;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* -------------------- Botones -------------------- */
+.btn-guardar {
+    background-color: #cadbec;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-guardar:hover {
+    background-color: #4b6682;
+    color: white;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #cadbec;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background: #4b6682;
+    color: white;
+}
+
+/* -------------------- Imagen perfil -------------------- */
+.image-label img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #6c557a;
+    margin-top: 15px;
+}

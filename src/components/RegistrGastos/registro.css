@@ -1,0 +1,234 @@
+/* ===== Estilos generales ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(165deg, #CADBEC, #F4E1B6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-top: 80px;
+}
+
+h1 {
+  color: #CADBEC;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(250, 246, 246);
+}
+
+/* ===== Contenedor principal ===== */
+.container {
+  background: linear-gradient(165deg, #F4E1B6, #CADBEC) !important ;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(202, 219, 236, 0.7);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* ===== Etiquetas y formularios ===== */
+label {
+  font-weight: bold;
+  color: #131213;
+}
+
+input[type="number"] {
+  margin: 15px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 3px solid #CADBEC;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* quitar flechas del campo number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]:focus {
+  border-color: #F4E1B6;
+  box-shadow: 0px 0px 6px rgba(244, 225, 182, 0.8);
+}
+
+.container2 {
+  margin-top: 15px;
+  text-align: left;
+  padding: 10px;
+}
+
+.container2 label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* ===== Imagen logo ===== */
+img {
+  width: 120px;
+  height: auto;
+  margin-left: auto;
+}
+
+/* ===== Barra superior ===== */
+.barra-superior {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  background: linear-gradient(to right, #F4E1B6, #CADBEC) !important ;
+  height: 65px;
+  box-shadow: 0 3px 5px rgba(26, 21, 21, 0.2);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ===== Menú lateral ===== */
+.Menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to bottom, #F4E1B6, #CADBEC);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.lineas-check {
+  display: none;
+}
+
+/* Activar menú */
+input:checked ~ .Menu {
+  transform: translateX(0);
+  box-shadow: 0 0 15px #CADBEC;
+}
+
+/* Estilos lista menú */
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #CADBEC;
+  font-weight: 500;
+  padding: 9px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s ease-out;
+}
+
+ul li:hover a {
+  color: #F4E1B6;
+  background-color: #CADBEC;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+ul li a i {
+  color: #CADBEC;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* ===== Ícono menú ===== */
+.Lineas {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  left: 15px;
+  z-index: 1001;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #F4E1B6;
+  box-shadow: 0 0 10px #CADBEC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Lineas .common {
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: #CADBEC;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.Lineas .top_line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.Lineas .middle_line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.Lineas .bottom_line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* Animación del botón */
+input:checked ~ .Lineas .top_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+
+input:checked ~ .Lineas .bottom_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+input:checked ~ .Lineas .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* ===== Botones ===== */
+button {
+  background: #CADBEC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #F4E1B6;
+  color: #CADBEC;
+}

@@ -1,0 +1,126 @@
+/* --- RESETEO GENERAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #E5DED3;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- BARRA SUPERIOR --- */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: linear-gradient(to right, #CADBEC, #B6A999);
+  height: 70px;
+  box-shadow: 0 3px 6px #B6A999;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+.barra-superior .logo {
+  height: 60px;
+}
+
+/* --- TÍTULO PRINCIPAL --- */
+.Titulo {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  color: #B6A999;
+  margin-top: 110px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px #E5DED3;
+}
+
+img {
+  width: 120px;
+  height: auto;
+  margin-left: 200px;
+}
+
+hr {
+  border: none;
+  border-top: 3px solid #B6A999;
+  margin: 15px auto 25px auto;
+  width: 80%;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.Container {
+  width: 800px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  padding: 35px;
+  background-image: linear-gradient(to right, #B6A999, #CADBEC);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(182,169,153,0.4);
+}
+
+/* --- BOTONES DEL MENÚ --- */
+.Botones a {
+  display: block;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 16px !important;
+  margin: 15px auto;
+  width: 300px;
+  background-color: #F4E1B6;
+  color: #B6A999;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px #B6A999;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.Botones a i {
+  font-size: 22px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.Botones a:hover {
+  transform: scale(1.05);
+  background: #CADBEC;
+  color: #B6A999;
+}
+
+/* --- BOTÓN DE ACCIÓN (REGISTRARSE) --- */
+.Container1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Container1 button {
+  font-size: 22px;
+  padding: 12px 35px;
+  background: #B6A999;
+  color: #F5F6F7;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 3px 3px 8px #B6A999;
+  text-align: center;
+}
+
+.Container1 button:hover {
+  background: #F4E1B6;
+  color: #B6A999;
+  transform: scale(1.05);
+}
