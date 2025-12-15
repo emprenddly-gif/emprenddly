@@ -1,22 +1,16 @@
-/* -------------------- Reset -------------------- */
+/* [TUS ESTILOS ORIGINALES: Reset, Body, Barra, Menú, etc. - SIN CAMBIOS] */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* -------------------- Body (AJUSTADO) -------------------- */
-body {
+.body-perfil {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #6C557A, #F0C2BE);
-    /* Se eliminan las propiedades de centrado para no interferir con elementos fijos */
-    /* height: 100vh; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    background: linear-gradient(to right, #b6a999, #F0C2BE);
 }
 
-/* -------------------- Barra superior (AJUSTADA) -------------------- */
 .barra-superior {
     display: flex;
     justify-content: space-between;
@@ -30,26 +24,25 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* CLAVE: Ahora cubre todo el ancho */
+    width: 100%;
     z-index: 1000;
 }
 
 .barra-superior .logo {
-    height: 60px; /* Reducido para que quepa */
-    margin-left: auto; /* Empuja el logo a la derecha (si hay otro elemento a la izq) */
+    height: 60px; 
+    margin-left: auto;
     margin-top: 0;
 }
 
-/* -------------------- Menú lateral -------------------- */
 .Menu {
     height: 100%;
-    width: 220px; /* Ancho ajustado a 220px para ser consistente con tu otro componente */
+    width: 220px; 
     position: fixed;
     top: 0;
     left: 0;
     background: linear-gradient(to bottom, #f5f6f7,#b6a999 , #cadbec);
     transition: 0.5s ease;
-    transform: translateX(-220px); /* Escondido por su propio ancho */
+    transform: translateX(-220px); 
     font-size: 20px;
     z-index: 999;
 }
@@ -82,7 +75,6 @@ body {
     background-color: #6C557A;
 }
 
-/* -------------------- Botón hamburguesa -------------------- */
 .lineas-check {
     display: none;
 }
@@ -128,7 +120,7 @@ body {
 }
 
 input:checked ~ .Lineas .top_line,
-.rotate-down { /* Agregadas clases de React */
+.rotate-down { 
     left: 2px;
     top: 14px;
     width: 25px;
@@ -136,7 +128,7 @@ input:checked ~ .Lineas .top_line,
 }
 
 input:checked ~ .Lineas .bottom_line,
-.rotate-up { /* Agregadas clases de React */
+.rotate-up { 
     left: 2px;
     top: 14px;
     width: 25px;
@@ -144,37 +136,18 @@ input:checked ~ .Lineas .bottom_line,
 }
 
 input:checked ~ .Lineas .middle_line,
-.hidden { /* Agregadas clases de React */
+.hidden { 
     opacity: 0;
     transform: translateX(20px);
 }
 
 input:checked ~ .Menu,
-.Menu.open { /* CLAVE: Agregada la clase 'open' para que funcione con React */
+.Menu.open { 
     transform: translateX(0);
     box-shadow: 0 0 15px #6C557A;
 }
 
-/* -------------------- Contenedor de perfil (AJUSTADO: Más pequeño y centrado) -------------------- */
-.contenedor {
-    max-width: 400px; /* Tamaño máximo más compacto */
-    width: 90%; /* Asegura que se vea bien en móviles */
-    margin: 0 auto; /* CLAVE: Centra horizontalmente */
-    margin-top: 100px; /* Baja el contenedor por debajo de la barra superior */
-    margin-bottom: 20px; /* Añade espacio al final */
-    background: linear-gradient(to right, #b6a999, #e5ded3);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: black;
-}
-
-.contenedor h2 {
-    margin-bottom: 20px;
-}
-
-/* -------------------- Formularios -------------------- */
+/* -------------------- Formularios ESTILOS ORIGINALES (Se sobrescriben a continuación) -------------------- */
 form label {
     display: block;
     text-align: left;
@@ -185,12 +158,11 @@ form input {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    background: #f4e1b6;
+    background: #f4e1b6; 
     border: 1px solid #000;
     border-radius: 5px;
 }
 
-/* -------------------- Botones -------------------- */
 .btn-guardar {
     background-color: #cadbec;
     color: black;
@@ -223,7 +195,6 @@ form input {
     color: white;
 }
 
-/* -------------------- Imagen perfil -------------------- */
 .image-label img {
     width: 100px;
     height: 100px;
@@ -231,4 +202,127 @@ form input {
     cursor: pointer;
     border: 2px solid #6c557a;
     margin-top: 15px;
+}
+
+
+
+/* ====================================================== */
+/* OPTIMIZACIÓN MÓVIL (Compacto + Tus Colores)            */
+/* ====================================================== */
+
+.perfil-main {
+    /* MÁRGENES Y ESPACIOS REDUCIDOS */
+    padding-top: 75px; /* Más cerca de la barra superior */
+    padding-left: 15px; /* Menos margen lateral */
+    padding-right: 15px; /* Menos margen lateral */
+    padding-bottom: 30px; /* Menos espacio abajo */
+    max-width: 450px; /* Ancho máximo más angosto */
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.perfil-main h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Menos espacio debajo del título */
+    color: #6C557A;
+    font-size: 1.5rem; /* Título un poco más pequeño */
+}
+
+/* 3. Campos de Formulario (Más pequeños y compactos) */
+.perfil-main form input {
+    padding: 10px; /* Reducido de 14px a 10px */
+    margin-top: 3px; /* Menos espacio arriba */
+    margin-bottom: 12px; /* Reducido de 18px a 12px entre campos */
+    background: #f4e1b6; 
+    border: 1px solid #000;
+    border-radius: 6px; 
+    font-size: 15px; /* Fuente un poco más pequeña */
+}
+
+.perfil-main form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-top: 10px; /* Mantener un poco de espacio para la etiqueta */
+}
+
+/* 4. Área de la Foto de Perfil (Más pequeña) */
+.perfil-foto-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 20px 0; /* Menos espacio alrededor de la foto */
+}
+
+.perfil-foto-area .image-label img {
+    width: 90px; /* Reducido de 120px a 90px */
+    height: 90px;
+    border: 4px solid #6C557A; 
+    object-fit: cover;
+    margin-top: 0; 
+}
+
+#imagenInput {
+    display: none;
+}
+
+
+/* 5. Estilo y Jerarquía de Botones (Más compactos) */
+.btn-accion {
+    /* Estilo base: Ancho completo */
+    width: 100%;
+    padding: 12px; /* Reducido de 15px a 12px */
+    margin-top: 10px; /* Menos espacio entre botones */
+    border-radius: 8px;
+    font-size: 15px; /* Fuente un poco más pequeña */
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none; 
+    display: block; 
+}
+
+/* Botón Principal (Guardar Datos) */
+.btn-primario {
+    background-color: #cadbec; 
+    color: black;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.btn-primario:hover {
+    background-color: #4b6682;
+    color: white;
+}
+
+/* Botón Secundario (Cerrar Sesión) */
+.btn-secundario {
+    background-color: #b6a999; 
+    color: #6C557A;
+    border: 1px solid #6C557A;
+}
+.btn-secundario:hover {
+    background-color: #6C557A;
+    color: white;
+}
+
+/* Botón de Peligro (Eliminar Cuenta) */
+.btn-peligro {
+    background-color: #cadbec; 
+    color: white;
+}
+.btn-peligro:hover {
+    background-color: #cadbec;
+}
+
+/* Botón Volver (Navegación sutil) */
+.btn-volver {
+    background: transparent;
+    color: #6C557A;
+    border: 2px solid #6C557A;
+    margin-top: 15px; /* Menos espacio arriba */
+}
+
+.btn-volver:hover {
+    background: #6C557A;
+    color: white;
 }
