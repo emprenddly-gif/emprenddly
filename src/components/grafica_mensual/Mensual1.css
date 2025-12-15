@@ -4,8 +4,19 @@
     box-sizing: border-box;
 }
 
-.reporte_mensual{
-    background: #b9a8c4 !important;
+/* --- Paleta de Colores --- */
+:root {
+    --color-primary:#e7dcc1;
+    --color-fondo: #cc2f2f;
+    --color-card: #e7dcc1;
+    --color-texto-oscuro: #343A40;
+    --color-texto-claro: #cadbec;
+    --color-sombra-suave: rgba(0, 0, 0, 0.08);
+}
+
+
+.fondomes{
+    background:var(--color-fondo) !important;
     width: 100%;
     min-height: 100vh;
     padding-top: 80px;
@@ -16,11 +27,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 15px;
-  background: linear-gradient(to right, #F0C2BE, #6C557A);
+  background: var(--color-card);
   height: 65px;
-  box-shadow: 0 3px 5px #76357c;
+   box-shadow: 0 2px 4px var(--color-sombra-suave);
   border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 55px;
+  border-bottom-right-radius: 35px;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,32 +46,34 @@
 
 
 
-.Menu{
-    height: 100%;
+.Menu_mes{
+    height: 100vh;
     width: 200px;
-    position: absolute;
-    background: linear-gradient(to bottom, #ffffff,#f0c2be , #6C557A);
+    position: fixed;
+    background: #bd8eb5;
     transition: 0.5s ease;
     transform: translateX(-200px);
     font-size: 20px;
-    margin-top: -81px;
+    top: 0px;
+    left: 0;
 }
 
-h1{
- color: #6C557A;
- font-weight: 800;
- text-align: right;
- padding: 10px 0;
- padding-right: 30px;
- pointer-events: none;
+.menu_titulo_mes{
+ color: #222324;
+ font-family: 'Times New Roman', Times, serif;
+  text-align: right;
+  padding: 10px 0;
+  padding-right: 10px;
+  pointer-events: none;
+  font-size: 50px;
 }
 
-ul li{
+ul.mes li{
     list-style: none;
 }
 
-ul li a{
-    color: #6C557A;
+ul.mes li a{
+    color: #555758;
     font-weight: 500;
     padding: 9px 0;
     display: flex;
@@ -71,72 +84,72 @@ ul li a{
     font-size: 20px;
 }
 
-ul li:hover a{
-    color: #f0c2be;
-    background-color: #6C557A;
+ul.mes li:hover a{
+    color: #686b6d;
+    background-color: #535250;
 }
 
-ul li a i{
-    color: #6C557A;
+ul.mes li a i{
+    color: #07090c;
     min-width: 25px;
     text-align: center;
 }
 
 
-.lineas-check{
+.lineas-check_mes{
     display: none;
 }
 
 
-.Lineas{
+.Lineas_mes{
     position: absolute;
     height: 30px;
     width: 30px;
     top: 20px;
     left: 15px;
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #E6D6AD;
-    box-shadow: 0 0 10px #6C557A;
+    background-color: #ebd59d;
+    box-shadow: 0 0 10px #cadbec;
 }
 
-.Lineas .common{
+.Lineas_mes .common{
     position: absolute;
     height: 2px;
     width: 20px;
-    background-color: #6C557A;
+    background-color: #f18cd8;
     border-radius: 50px;
     transition: 0.3s ease;
 }
 
-.Lineas .top_line{
+.Lineas_mes .top_line{
     top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.Lineas .middle_line{
+.Lineas_mes .middle_line{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
 
-.Lineas .bottom_line{
+.Lineas_mes .bottom_line{
     top: 70%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-input:checked ~ .Lineas .top_line{
+.lineas-check_mes:checked ~ .Lineas_mes .top_line{
     left: 2px;
     top: 14px;
     width: 25px;
     transform: rotate(45deg);
 }
 
-input:checked ~ .Lineas .bottom_line{
+.lineas-check_mes:checked ~ .Lineas_mes .bottom_line{
     left: 2px;
     top: 14px;
     width: 25px;
@@ -144,85 +157,99 @@ input:checked ~ .Lineas .bottom_line{
 }
 
 
-input:checked ~ .Lineas .middle_line{
+.lineas-check_mes:checked ~ .Lineas_mes .middle_line{
     opacity: 0;
     transform: translateX(20px);
 }
 
-input:checked ~.Menu{
+.lineas-check_mes:checked ~.Menu_mes{
     transform: translateX(0);
     box-shadow: 0 0 15px #6C557A;
 }
-.Titulo_Gana{
-    text-align: center;
-    font-size: 50px;
-    font-weight: 900;
-    color: #f0c2be;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px, #6C557A 0 0 1em, #6C557A 0 0 0.2em;
-}
 
-.gana{
+
+/* --- Título Principal --- */
+.Titulo_mes {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-texto-oscuro);
+    margin-top: 95px;
+    margin-bottom: 10px;
+}
+.mes_linea {
     border: none;
-    border-top: 1px solid #6C557A;
-    margin: 10px 0;
-    height: 3px;
-    margin-bottom: 30px;
+    border-top: 2px solid var(--color-texto-claro);
+    margin: 10px auto 30px auto;
+    height: 2px;
+    width: 80%;
 }
 
 
-/*calendario*/
-.semana-container {
-    width: 50%;
-    margin-left: 20%;
+/* --- Selector de Mes --- */
+.selector-wrapper {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    position: relative;
+}
+
+.mes-container {
+    width: 95%;
+    margin-left: 5%;
     padding: 12px 20px;
-    background:  linear-gradient(to right, #F0C2BE, #6C557A);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: var(--color-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: 0.2s ease;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.semana-container:hover {
-    transform: scale(1.05);
+.mes-container:hover {
+    background: #cadbec;
+    transform: translateY(-1px);
 }
 
 .mes-texto {
     font-size: 23px;
-    font-weight: 100000;
-    color: #f7f7f7;
+    font-weight: bold;
+    color: #58534d;
    
 }
 
-.semana-container i {
-    font-size: 22px;
-    color: #76357c;
-   
+.mes-container i {
+    color: var(--color-card);
+    font-size: 18px;
 }
 
 
-.calendario-container {
-    margin-left: 20%;
+.calendario-container_mes {
     margin-top: 10px;
-    width: 50%;
-    background: linear-gradient(to right, #F0C2BE, #6C557A);
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif ;
+    width: 90%;
+    background: var(--color-card);
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 25px;
+    box-shadow: 0 2px 8px var(--color-sombra-suave);
 }
 
-.calendario-container input[type="month"] {
-    padding: 8px;
-    font-size: 10px;
-    border: 1px solid #000000;
+.calendario-container_mes input[type="month"] {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid var(--color-texto-claro);
     border-radius: 6px;
     width: 100%;
-    max-width: 300px;
+    background-color: var(--color-fondo);
+}
+
+p {
+    color: #272727;
+    font-size: 20px;
+    text-align: center;
 }
 
 
@@ -231,14 +258,129 @@ input:checked ~.Menu{
 /* Contenedor del gráfico */
 .chart-card {
   width: 90%;          /* ocupa 90% del ancho de la pantalla */
-  max-width: 1000px;   /* evita que se estire demasiado en pantallas grandes */
+  max-width: 900px;   /* evita que se estire demasiado en pantallas grandes */
   height: 450px;       /* altura suficiente para barras */
   margin: 30px auto;   /* centra horizontalmente y da margen arriba/abajo */
   padding: 20px;
-  background: #fff;
+   background: var(--color-card);
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 15px var(--color-sombra-suave);
   display: flex;       /* hace que Bar ocupe todo el espacio disponible */
   align-items: center;
   justify-content: center;
+}
+
+
+.mensaje-card {
+    color: var(--color-texto-claro);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* --- Tabla de Resumen --- */
+.totales-mensuales-container {
+    width: 95%;
+    max-width: 500px;
+    margin: 20px auto 40px auto;
+    padding: 20px;
+    background: var(--color-card);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--color-sombra-suave);
+}
+
+
+.resumen-titulo {
+    font-size: 20px;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+
+.ganancias-table {
+    width: 100%;
+    border-collapse: separate; /* Permite border-radius y spacing */
+    border-spacing: 0 5px; /* Espacio entre filas */
+    font-size: 16px;
+    
+}
+
+/* Encabezados de la tabla */
+.table-header {
+    background-color: var(--color-fondo);
+    color: var(--color-texto-oscuro);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.table-header:first-child {
+    border-top-left-radius: 6px;
+}
+.table-header:last-child {
+    border-top-right-radius: 6px;
+}
+
+/* Filas del cuerpo */
+.table-row {
+    background-color: #F8F9FA;
+    transition: background-color 0.2s;
+}
+
+
+.table-row:hover {
+    background-color: #E9ECEF;
+}
+
+
+.table-data {
+    padding: 10px 8px;
+   vertical-align: middle;
+}
+
+.table-data.total-col {
+    text-align: right;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+    font-size: 17px;
+}
+
+/* Indicador de color y nombre del método */
+.metodo-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el total general al final */
+.total-general {
+    margin-top: 20px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-texto-oscuro);
+    background-color: #E9ECEF; 
+    border-radius: 8px;
+}
+
+.total-monto {
+    color: #a19689;
+    font-size: 20px;
 }

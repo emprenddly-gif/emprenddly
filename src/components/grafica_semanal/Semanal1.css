@@ -4,60 +4,76 @@
     box-sizing: border-box;
 }
 
-body{
-    background: #b9a8c4 ;
+
+/* Paleta de colores */
+:root {
+    --color-fondo: #F0F4F8;
+    --color-acento: #6c5fe9;
+    --color-sombra: #D1D9E6;
+    --color-texto: #333333;
+    --color-texto-claro: #FFFFFF;
 }
 
-.barra-superior {
+.Semana_Body {
+    background: var(--color-fondo) !important;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+} 
+
+.barra-superior_sema {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 15px;
-  background: linear-gradient(to right, #F0C2BE, #6C557A);
+  background: var(--color-texto-claro);
   height: 65px;
-  box-shadow: 0 3px 5px #76357c;
+  box-shadow: 0 3px 5px #f4e1b6;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 55px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 82%;
+  width: 75%;
 }
 
-.barra-superior .logosem {
+.barra-superior_sema .logosem {
   height: 87px;
   margin-left: 100%; /* Esto empuja el logo hacia la derecha */
-  padding: 0 0;
+  padding: 0;
 }
 
 
 
-.Menu{
-    height: 100%;
+.Menu_semana{
+    height: 100vh;
     width: 200px;
-    position: absolute;
-    background: linear-gradient(to bottom, #ffffff,#f0c2be , #6C557A);
+    position: fixed;
+    background: var(--color-texto-claro);
     transition: 0.5s ease;
     transform: translateX(-200px);
     font-size: 20px;
-    margin-top: -81px;
+    top: 0px;
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 }
 
-h1{
- color: #6C557A;
- font-weight: 800;
- text-align: right;
- padding: 10px 0;
- padding-right: 30px;
- pointer-events: none;
+.menu_titulo_sema {
+    color: var(--color-acento);
+    font-family: 'Times New Roman', Times, serif;
+  text-align: right;
+  padding: 10px 0;
+  padding-right: 10px;
+  pointer-events: none;
+  font-size: 50px;
 }
 
-ul li{
+.ulsema li{
     list-style: none;
 }
 
-ul li a{
-    color: #6C557A;
+.ulsema li a{
+    color: var(--color-texto);
     font-weight: 500;
     padding: 9px 0;
     display: flex;
@@ -68,72 +84,72 @@ ul li a{
     font-size: 20px;
 }
 
-ul li:hover a{
-    color: #f0c2be;
-    background-color: #6C557A;
+.ulsemal li:hover a{
+    color: var(--color-acento);
+    background-color: var(--color-fondo);
 }
 
-ul li a i{
-    color: #6C557A;
+.ulsema li a i{
+    color: var(--color-acento);
     min-width: 25px;
     text-align: center;
 }
 
 
-.lineas-check{
+.lineas-check_sema{
     display: none;
 }
 
 
-.Lineas{
+.Lineas_sema{
     position: absolute;
     height: 30px;
     width: 30px;
     top: 20px;
     left: 15px;
-    z-index: 1;
+    z-index: 2;
     cursor: pointer;
     border-radius: 5px;
     background-color: #E6D6AD;
-    box-shadow: 0 0 10px #6C557A;
+    box-shadow: 0 0 10px #1e6eca;
 }
 
-.Lineas .common{
+.Lineas_sema .common{
     position: absolute;
     height: 2px;
     width: 20px;
-    background-color: #6C557A;
+    background-color: #2b78d1;
     border-radius: 50px;
     transition: 0.3s ease;
 }
 
-.Lineas .top_line{
+.Lineas_sema .top_line{
     top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.Lineas .middle_line{
+.Lineas_sema .middle_line{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
 
-.Lineas .bottom_line{
+.Lineas_sema .bottom_line{
     top: 70%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-input:checked ~ .Lineas .top_line{
+.lineas-check_sema:checked ~ .Lineas_sema .top_line{
     left: 2px;
     top: 14px;
     width: 25px;
     transform: rotate(45deg);
 }
 
-input:checked ~ .Lineas .bottom_line{
+.lineas-check_sema:checked ~ .Lineas_sema .bottom_line{
     left: 2px;
     top: 14px;
     width: 25px;
@@ -141,108 +157,326 @@ input:checked ~ .Lineas .bottom_line{
 }
 
 
-input:checked ~ .Lineas .middle_line{
+.lineas-check_sema:checked ~ .Lineas_sema .middle_line{
     opacity: 0;
     transform: translateX(20px);
 }
 
-input:checked ~.Menu{
+.lineas-check_sema:checked ~.Menu_semana{
     transform: translateX(0);
     box-shadow: 0 0 15px #6C557A;
 }
-.Titulo{
+.Titulo_sema{
     text-align: center;
     font-size: 40px;
     font-weight: 700;
-    color: #f0c2be;
-    margin-top: 80px;
+    color: #b6a999;
+    margin-top: 100px;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 2px, #6C557A 0 0 1em, #6C557A 0 0 0.2em;
+    text-shadow: 1px 1px 2px, #cadbec 0 0 1em, #f4e1b6 0 0 0.2em;
 }
 
-hr{
+.hrsema{
     border: none;
-    border-top: 1px solid #620797;
+    border-top: 2px solid #b6a999;
     margin: 10px 0;
     height: 2px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
+/* Título principal */
+.Titulo_sema {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--color-acento);
+    margin-top: 100px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px var(--color-sombra);
+}
+
+.hrsema {
+    border: none;
+    border-top: 2px solid var(--color-acento);
+    margin: 10px auto 30px auto;
+    height: 2px;
+    width: 90%;
+}
 
 /*calendario*/
+.semana-wrapper {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto 30px auto;
+}
+
 .semana-container {
-    width: 50%;
-    margin-left: 20%;
-    padding: 12px 20px;
-    background:  linear-gradient(to right, #F0C2BE, #6C557A);
+    width: 85%;
+    margin-left: 7%;
+    padding: 6px;
+    background: var(--color-texto-claro);
+    border: 1px solid var(--color-sombra);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.2s ease;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .semana-container:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .semana-texto {
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 100000;
-    color: #f7f7f7;
+    color: var(--color-texto);
    
 }
 
 .semana-container i {
-    font-size: 22px;
-    color: #76357c;
+    font-size: 20px;
+    color: var(--color-acento);
+    transition: transform 0.3s;
    
 }
-
-
-.calendario-container {
-    margin-left: 20%;
-    margin-top: 10px;
-    width: 50%;
-    background: linear-gradient(to right, #F0C2BE, #6C557A);
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif ;
+.semana-container i.rotate {
+    transform: rotate(180deg);
 }
 
-.calendario-container input[type="week"] {
+.calendario-container_sema {
+    margin-top: 10px;
+    width: 90%;
+    background: var(--color-texto-claro);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 5%;
+
+}
+
+.calendario-container_sema input[type="week"] {
     padding: 8px;
-    font-size: 10px;
-    border: 1px solid #000000;
+    font-size: 20px;
+    border: 1px solid var(--color-sombra);
     border-radius: 6px;
     width: 100%;
-    max-width: 300px;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+}
+
+.botonsema {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-acento);
+    color: var(--color-texto-claro);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botonsema:hover {
+    background: #5A476A;
 }
 
 
-/* barras */
-/* src/pages/Reporte_Sema.css */
-
-/* Contenedor del chart*/
-
-.chart-card {
-  width: 95%;  
-  margin-top: 10%;
-
+/* Mensaje */
+.mensaje-sema {
+    text-align: center;
+    font-size: 20px;
+    color: var(--color-texto);
+    margin-top: 40px;
+    padding: 20px;
+    background: var(--color-texto-claro);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
 }
-
-/* Canvas del chart */
-.chart-card canvas {
-  width: 90% !important;    /* obligatorio para que el canvas llene el contenedor */
-  height: 400px !important;  /* altura deseada de la gráfica */
-}
-
-/* Opcional: centrar el contenedor principal */
-body, reporte_semanal {
+/* Contenedor general de la gráfica */
+.chart-container {
+  width: 100%;
+  height: 380px;        /* Altura óptima */
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-} 
+}
+
+/* Lienzo del gráfico */
+.chart-container canvas {
+  background: #f8f9fa;     /* fondo gris suave */
+  border-radius: 14px;
+  padding: 10px;
+}
+
+/* Título más claro */
+.chart-title {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 320px;
+    padding: 10px;
+  }
+
+  .chart-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    height: 280px;
+  }
+
+  .chart-title {
+    font-size: 15px;
+  }
+}
+
+
+
+/* ======================================= */
+/* 🟢 ESTILOS PARA GANANCIAS NETAS (NUEVOS) */
+/* ======================================= */
+
+.contenedor-boton-ganancias {
+    text-align: center; /* Centrar el botón */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.boton-ganancias-netas {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    /* Usando un color más fuerte para el botón de acción principal */
+    background-color: var(--color-acento); 
+    color: var(--color-texto-claro);
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton-ganancias-netas:hover:not(:disabled) {
+    background-color: #5A476A; /* Tono de hover similar al botonsema */
+}
+
+.boton-ganancias-netas:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Estilos para el contenedor y la tabla */
+.ganancias-tabla-container {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid var(--color-sombra);
+    border-radius: 8px;
+    background-color: var(--color-texto-claro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px; /* Tamaño cómodo para la tabla */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ganancias-titulo {
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ganancias-tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ganancias-tabla th, .ganancias-tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.ganancias-tabla th {
+    background-color: var(--color-acento); /* Color de acento para el encabezado */
+    color: white;
+    font-weight: bold;
+}
+
+.total-row td {
+    border-top: 3px solid var(--color-acento);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Estilos para indicar visualmente el resultado (Ganancia Neta) */
+.positivo {
+    background-color: #e6ffe6; /* Fondo verde claro */
+    color: #008000; /* Texto verde oscuro */
+}
+
+.negativo {
+    background-color: #ffe6e6; /* Fondo rojo claro */
+    color: #cc0000; /* Texto rojo oscuro */
+}
+
+.monto-ingresos {
+    color: #008000; /* Verde fuerte para ingresos */
+}
+
+/* El gasto también tiene un color de egreso para distinguirlo, aunque la ganancia neta lo define */
+.monto-gastos {
+    color: #cc0000; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

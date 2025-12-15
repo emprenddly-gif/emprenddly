@@ -4,12 +4,11 @@
   box-sizing: border-box;
 }
 
- html, body {
-  background-color: #fffefe !important; /* Fuerza fondo blanco */
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+ .pagina_inventario2 {
+    background:#f5ebde !important;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
 }
 
 
@@ -18,39 +17,39 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 15px;
-  background: linear-gradient(to right, #33348a, #809fe1);
+  background: linear-gradient(to right, #B6A999, #F4E1B6);
   height: 65px;
-  box-shadow: 0 3px 5px #809fe1;
+  box-shadow: 0 3px 5px #B6A999;
   border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 55px;
+  border-bottom-right-radius: 35px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 75%;
 }
 
 .logo2 {
   height: 90px;
-  margin-left:  310px;
+  margin-right: -120px;
   padding: 0;
   object-fit: contain;  /* mantiene proporción de la imagen */
 }
 
 
-.MenuRegistro2{
+.Menuinven{
   height: 100vh;
   width: 200px;
   position: fixed;
   top: 0px;
   left: 0;
-  background: linear-gradient(to bottom, #ffffff,#809fe1 , #33348a);
+  background: #CADBEC;
   transition: 0.5s ease;
   transform: translateX(-200px);
   font-size: 20px;
 }
 
-.menu2{
-  color: #33348a;
+.menu_inven{
+  color: #B6A999;
   font-family: 'Times New Roman', Times, serif;
   text-align: right;
   padding: 10px 0;
@@ -59,12 +58,12 @@
   font-size: 50px;
 }
 
-.ul2 li{
+.Inven li{
     list-style: none;
 }
 
-.ul2 li a{
-    color: #33348a;
+.Inven li a{
+    color: #B6A999;
     font-weight: 500;
     padding: 9px 0;
     display: flex;
@@ -75,24 +74,24 @@
     font-size: 20px;
 }
 
-.ul2 li:hover a{
-    color: rgb(235, 231, 231);
-    background-color: #809fe1;
+.Inven li:hover a{
+    color: #333;
+    background-color: #CADBEC;
 }
 
-.ul2 li a i{
-    color: #33348a;
+.Inven li a i{
+    color: #B6A999;
     min-width: 25px;
     text-align: center;
 }
 
 
-.lineas-check{
+.lineas-check_Inven{
     display: none;
 }
 
 
-.Lineas2{
+.Lineas_Inven{
     position: absolute;
     height: 30px;
     width: 30px;
@@ -101,46 +100,46 @@
     z-index: 2;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #809fe1;
-    box-shadow: 0 0 10px #ffffff;
+    background-color: #B6A999;
+    box-shadow: 0 0 10px #00060c;
 }
 
-.Lineas2 .common{
+.Lineas_Inven .common{
     position: absolute;
     height: 2px;
     width: 20px;
-    background-color: #33348a;
+    background-color: #CADBEC;
     border-radius: 50px;
     transition: 0.3s ease;
 }
 
-.Lineas2 .top_line{
+.Lineas_Inven .top_line{
     top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.Lineas2 .middle_line{
+.Lineas_Inven.middle_line{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
 
-.Lineas2 .bottom_line{
+.Lineas_Inven .bottom_line{
     top: 70%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-input:checked ~ .Lineas2 .top_line{
+.lineas-check_Inven:checked ~ .Lineas_Inven .top_line{
     left: 2px;
     top: 14px;
     width: 25px;
     transform: rotate(45deg);
 }
 
-input:checked ~ .Lineas2 .bottom_line{
+.lineas-check_Inven:checked ~ .Lineas_Inven .bottom_line{
     left: 2px;
     top: 14px;
     width: 25px;
@@ -148,40 +147,40 @@ input:checked ~ .Lineas2 .bottom_line{
 }
 
 
-input:checked ~ .Lineas2 .middle_line{
+.lineas-check_Inven:checked ~ .Lineas_Inven .middle_line{
     opacity: 0;
     transform: translateX(20px);
 }
 
-input:checked ~.MenuRegistro2{
+.lineas-check_Inven:checked ~.Menuinven{
     transform: translateX(0);
-    box-shadow: 0 0 15px #4b4a4a;
+    box-shadow: 0 0 15px #B6A999;
 }
 /*DEMAS*/ 
 
-.Titulo2{
+.TituloInventario{
   text-align: center;
   font-size: 50px;
   font-weight: 900;
-  color: #33348a;
+  color: #d8cfbf;
   margin-top: 1700px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 2px, #809fe1 0 0 1em, #33348a 0 0 0.2em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px, #7a6f61 0 0 1em, #7a6f61 0 0 0.2em;
 }
 
 .hr2{
   border: none;
-  border-top: 1px solid  #17057c;
+  border-top: 1px solid  #B6A999;
   margin: 10px 0;
   height: 3px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 /* Tabla */
 
-.Container02 {
+.Container_inven {
   align-items: center;
-  background: linear-gradient(to right, #809fe1, #33348a);
+  background: linear-gradient(to right, #B6A999, #CADBEC);
   padding: 10px 10px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -192,7 +191,7 @@ input:checked ~.MenuRegistro2{
   box-sizing: border-box; /* Esta línea ayuda mucho */
 }
 
-table {
+.Titulos_Inven {
   border-collapse: collapse;
   margin: 0 auto;
   width: auto;
@@ -206,11 +205,11 @@ th, td {
   text-align: center;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
-  color: #120750;
+  color: #443f39;
 }
 
 th {
-    background: #d8e2ee;
+    background: #e5ded3;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -231,8 +230,8 @@ th {
     font-size: 22px;
     border-radius: 5px;
     border: none;
-    background: linear-gradient(to right, #809fe1, #33348a);
-    color: #fff;
+    background: linear-gradient(to right, #CADBEC, #B6A999);
+    color: #443f39;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
     width: 65%;
@@ -241,7 +240,8 @@ th {
 }
 
 .btn-container button:hover {
-    background: linear-gradient(to right, #33348a, #809fe1);
+    background:#CADBEC;
+    color: #443f39;
 }
 
 
@@ -261,8 +261,8 @@ th {
 
 /* Caja del modal */
 .modal-content {
-  background: linear-gradient(to right, #809fe1, #33348a);
-  border: 2px solid #0c013f;
+  background: linear-gradient( to right, #CADBEC, #B6A999);
+  border: 2px solid #443f39;
   border-radius: 8px;
   padding: 20px;
   width: 350px;
@@ -277,7 +277,7 @@ th {
   font-weight: bold;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: #120750;
+  color:#443f39
 }
 
 
@@ -285,7 +285,7 @@ th {
 #previewImg {
   width: 150px;
   height: 150px;
-  border: 2px dashed #6c63ff; /* 👈 estilo de "área clickeable" */
+  border: 2px dashed #B6A999; /* 👈 estilo de "área clickeable" */
   border-radius: 10px;
   object-fit: contain;
   display: block;
@@ -309,8 +309,8 @@ th {
   text-align: center;
   border-radius: 10px;
   border: 0;
-  background: #b0c9e7;
-  color: #120750;
+  background: #e5ded3;
+  color: #443f39;
 }
 
 /* Botones */
@@ -324,37 +324,44 @@ th {
   border: 0;
   cursor: pointer;
   text-transform: uppercase;
+  border: 1px solid #66625e;
 }
 
 /* Botón principal */
 .btn-primary {
-  background: #1405a0;
-  color: #ffffff;
+  background: #CADBEC;
+  color: #443f39;
+  
 }
 
 .btn-primary:hover {
-  background: #4042e9;
+  background: #F4E1B6;
+  color: #443f39;
+  border: 1px solid #66625e;
 }
 
 /* Botón secundario */
 .btn-secondary {
-  background: #dcdcdc;
-  color: #000000;
+  background: #F4E1B6;
+  color: #443f39;
+  
 }
 
 .btn-secondary:hover {
-  background: #c0b3e4;
+  background: #CADBEC;
+  color: #443f39;
+  border: 1px solid #66625e;
 }
 
 /* ICONP DE EDITAR*/
 .edit-icon {
   margin-left: 10px;
-  color: #b8b9fa;
+  color: #443f39;
   cursor: pointer;
   transition: color 0.3s;
 }
 .edit-icon:hover {
-  color: #2463eb;
+  color: #F4E1B6;
 }
 
 /* Fondo oscuro (agregar y editar usan el mismo estilo) */
@@ -373,8 +380,8 @@ th {
 
 /* Caja del modal (compartida para ambos) */
 .modal-content {
-  background: linear-gradient(to right, #809fe1, #33348a);
-  border: 2px solid #0c013f;
+  background: linear-gradient(to right, #CADBEC, #B6A999);
+  border: 2px solid #443f39;
   border-radius: 8px;
   padding: 20px;
   width: 350px;
@@ -384,37 +391,25 @@ th {
 }
 
 /* Buscar */
-input{
-  width: 70%;
-  padding: 13px;
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-left: 35px;
+.BuscarInvent{
+  width: 80%;
+  margin-left: 45px;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
   text-align: center;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 2px 5px #060124;
-  background: #85a8e9;
-  color: #000000;
-
 }
 
-input::placeholder{
+.inventbuscar::placeholder{
   color: #242222;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-weight: bold;
 }
 
-.LupitaBusc{
-  width: 20%;
-  padding: 5px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
-  background-color: #7492ca;
-  border-radius: 3px;
-  border: none;
-  box-shadow: 0 2px 5px #060124;
-}
+
+
+
+

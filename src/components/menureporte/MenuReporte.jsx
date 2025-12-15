@@ -1,3 +1,4 @@
+// src/components/MenuReporGanan.jsx
 import { useState } from "react";
 import "./menuReporGanan.css";
 import LogoEmpren from "../../assets/Logo_Empren.png";
@@ -5,21 +6,18 @@ import LogoEmpren from "../../assets/Logo_Empren.png";
 const MenuReporGanan = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
-    <div className="reporte_ganancias">
+    <div className="reporte-ganancias-page">
+      
       {/* Barra superior */}
-      <header className="barra-superior">
-        <img src={LogoEmpren} alt="Logo" className="logoem" />
+      <header className="barra-superiormenu">
+        <img src={LogoEmpren} alt="Logo Emprenddly" className="logo-emprenmenu" />
       </header>
 
-        {/* Botón de líneas (hamburger) */}
+      {/* Botón hamburguesa */}
       <div
-        className={`Lineas ${menuOpen ? "active" : ""}`}
-        onClick={toggleMenu}
+        className={`MenuToggle ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
       >
         <span className="top_line common"></span>
         <span className="middle_line common"></span>
@@ -27,42 +25,39 @@ const MenuReporGanan = () => {
       </div>
 
       {/* Menú lateral */}
-      <label htmlFor="menu-toggle">
-        <div className={`Menu ${menuOpen ? "open" : ""}`}>
-          <h1 className="menu_titulo">Menu</h1>
-
-            <ul>
-            <li><a href="http://localhost:5173/usuarios"><i className="fas fa-user"></i>Usuarios</a></li>
-            <li><a href="http://localhost:5173/registroinventario"><i className="fas fa-clipboard-list"></i>Inventario</a></li>
-            <li><a href="#"><i className="fas fa-cart-plus"></i>Registro De Ventas</a></li>
-            <li><a href="http://localhost:5173/reporteventas"><i className="fas fa-chart-line"></i>Reporte De Ventas</a></li>
-            <li><a href="http://localhost:5173/registrogastos"><i className="fas fa-wallet"></i>Registro De Gastos</a></li>
-            <li><a href="http://localhost:5173/reportegastos"><i className="fas fa-file-invoice-dollar"></i>Reporte De Gastos</a></li>
-            <li><a href="http://localhost:5173/menureporte"><i className="fas fa-dollar-sign"></i>Reporte De Ganancias</a></li>
-            <li><a href="http://localhost:5173/ajustes"><i className="fas fa-cogs"></i>Ajustes</a></li>
-          </ul>
-        </div>
-      </label>
+      <aside className={`SidebarMenu ${menuOpen ? "open" : ""}`}>
+        <h1 className="menu-titulo">Navegación</h1>
+        <ul>
+          <li><a href="/usuarios"><i className="fas fa-user"></i><span>Usuarios</span></a></li>
+          <li><a href="/registroinventario"><i className="fas fa-clipboard-list"></i><span>Inventario</span></a></li>
+          <li><a href="#"><i className="fas fa-cart-plus"></i><span>Registro de Ventas</span></a></li>
+          <li><a href="/reporteventas"><i className="fas fa-chart-line"></i><span>Reporte de Ventas</span></a></li>
+          <li><a href="/registrogastos"><i className="fas fa-wallet"></i><span>Registro de Gastos</span></a></li>
+          <li><a href="/reportegastos"><i className="fas fa-file-invoice-dollar"></i><span>Reporte de Gastos</span></a></li>
+          <li className="current-page"><a href="/menureporte"><i className="fas fa-dollar-sign"></i><span>Reporte de Ganancias</span></a></li>
+          <li><a href="/ajustes"><i className="fas fa-cogs"></i><span>Ajustes</span></a></li>
+        </ul>
+      </aside>
 
       {/* Contenido */}
-      <div>
-        <h1 className="TituloRepor">Reporte De Ganancias</h1>
-        <hr className="hrreport" />
-      </div>
+      <main className="main-content">
+        <h1 className="TituloRepor">Reporte de Ganancias</h1>
+        <hr className="hr-content-divider" />
 
-      <div className="Container">
-        <p className="Explicacion">
-          Al dar clic en las opciones Diario, Mensual, Semanal o Anual, el usuario
-          podrá acceder de forma rápida y sencilla a los reportes de ganancias
-          correspondientes a cada periodo de tiempo.
-        </p>
-        <div className="Botones">
-          <a href="http://localhost:5173/reportediario">Diario</a>
-          <a href="http://localhost:5173/reportesemanal">Semanal</a>
-          <a href="http://localhost:5173/reportemensual">Mensual</a>
-          <a href="http://localhost:5173/reporteanual">Anual</a>
+        <div className="ReportContainer">
+          <p className="Explicacion">
+            Selecciona un periodo de tiempo para visualizar los reportes de ganancias.
+          </p>
+
+          <div className="PeriodoCards">
+            <a href="/reportediario"><i className="fas fa-calendar-day"></i><span>Diario</span></a>
+            <a href="/reportesemanal"><i className="fas fa-calendar-week"></i><span>Semanal</span></a>
+            <a href="/reportemensual"><i className="fas fa-calendar-alt"></i><span>Mensual</span></a>
+            <a href="/reporteanual"><i className="fas fa-calendar-check"></i><span>Anual</span></a>
+          </div>
         </div>
-      </div>
+      </main>
+
     </div>
   );
 };

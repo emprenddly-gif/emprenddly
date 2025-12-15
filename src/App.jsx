@@ -45,7 +45,10 @@ function App() {
         <Route path="/reportesemanal" element={<ReporteSemanal />} />
 
         {/* Reporte de ganancias Anual */}
-        <Route path="/reporteanual" element={<ReporteAnual />} /> 
+        <Route path="/reporteanual" element={<ReporteAnual />}/>
+
+        {/* Reporte de ganancias semanal */}
+        <Route path="/tablaganancias" element={<TablaGanancias />} /> 
 
         {/* Menu principal */}
         <Route path="/menu" element={<Menu />} />
