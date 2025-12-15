@@ -1,180 +1,175 @@
+/* ===================================================== */
+/* 🔹 ESTILOS GENERALES 🔹 */
+/* ===================================================== */
+
 * { 
-  margin: 0;              /* quita márgenes por defecto */
-  padding: 0;             /* quita relleno por defecto */
-  box-sizing: border-box; /* incluye padding y borde en el tamaño total */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background:black;          /* color de fondo */
-  font-family: Arial, sans-serif; /* tipografía general */
+  background: #F5F6F7;
+  font-family: Arial, sans-serif;
 }
 
-/* Barra superior */
+/* ===================================================== */
+/* 🔹 BARRA SUPERIOR 🔹 */
+/* ===================================================== */
+
 .barra-superior {
-  display: flex;                         /* organiza hijos en fila */
-  justify-content: space-between;        /* espacio entre elementos */
-  align-items: center;                   /* centra verticalmente */
-  padding: 5px 1 px;                    /*  "-1 px" no es válido */
-  background: linear-gradient(to right, #F4E1B6, #E5DED3); /* degradado */
-  height: 65px;                          /* altura fija */
-  box-shadow: 0 3px 2px #B6A999;         /* sombra inferior */
-  border-bottom-left-radius: 13px;       /* redondeo esquina izquierda */
-  border-bottom-right-radius: 55px;      /* redondeo esquina derecha */
-  position: fixed;                       /* se queda fijo al hacer scroll */
-  top: 0;                                /* pegado arriba */
-  left: 0;                               /* pegado a la izquierda */
-  width: 82%;                            /* ancho de la barra */
-  z-index: 10;                           /* prioridad sobre otros elementos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1px;
+  background: linear-gradient(to right, #F4E1B6, #E5DED3); 
+  height: 65px;
+  box-shadow: 0 3px 2px #B6A999;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 82%;
+  z-index: 10;
 }
 
 .barra-superior .logo {
-  height: 77px;      /* alto del logo */
-  margin-left: 84%;  /* lo empuja hacia la derecha */
-  margin-top: 8px;   /* espacio superior */
+  height: 77px;
+  margin-left: 84%;
+  margin-top: 8px;
 }
 
-/* Título general */
+/* ===================================================== */
+/* 🔹 TÍTULO PRINCIPAL 🔹 */
+/* ===================================================== */
+
 .Titulo {
-  text-align: center;                                     /* centrado */
-  font-size: 40px;                                        /* tamaño grande */
-  font-weight: 400px; /* ⚠️ error → debe ser 400 (sin px) */ 
-  color: #F4E1B6;                                         /* color beige */
-  margin-top: 80px;                                       /* baja el título */
-  margin-bottom: 20px;                                    /* espacio debajo */
-  text-shadow: 1px 1px 2px, #adadad 0 0 1em, #aaaaaa 0 0 0.2em; /* sombra */
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: #B6A999;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #E5DED3;
 }
 
 hr {
-  border: none;                       /* sin borde por defecto */
-  border-top: 1px solid #411e02;      /* línea superior personalizada */
-  margin: 10px auto 20px auto;        /* márgenes arriba/abajo */
-  width: 70%;                         /* ancho reducido */
-  height: 2px;                        /* grosor */
+  border: none;
+  border-top: 1px solid #B6A999;
+  margin: 10px auto 20px auto;
+  width: 70%;
+  height: 2px;
 }
 
-/* Subtítulos opcionales */
+/* ===================================================== */
+/* 🔹 SUBTÍTULOS 🔹 */
+/* ===================================================== */
+
 .subtitle {
-  font-size: 28px;       /* tamaño mediano */
-  margin-bottom: 15px;   /* espacio abajo */
-  font-weight: bold;     /* negrita */
-  color: #222;           /* gris oscuro */
-  text-align: center;    /* centrado */
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #3b2f2f;
+  text-align: center;
 }
 
-/* Productos */
-.products {
-  margin-top: 10px;                 /* espacio arriba */
-  display: flex;                    /* coloca productos en fila */
-  justify-content: space-around;    /* reparte espacio */
-  margin-bottom: 20px;              /* espacio abajo */
-  text-align: center;               /* centra texto dentro */
-  flex-wrap: wrap;                  /* permite que salten de línea */
-  gap: 15px;                        /* espacio entre productos */
-}
+/* ===================================================== */
+/* 🔹 MÉTODOS DE PAGO 🔹 */
+/* ===================================================== */
 
-.product-btn {
-  background: #E5DED3;              /* color de fondo */
-  border: none;                     /* sin borde */
-  padding: 10px;                    /* relleno interno */
-  border-radius: 12px;              /* esquinas redondeadas */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* sombra */
-  cursor: pointer;                  /* cambia cursor a mano */
-  transition: transform 0.2s;       /* animación suave al pasar mouse */
-}
-
-.product-btn:hover {
-  transform: translateY(-2px);      /* se levanta un poco */
-}
-
-.product-btn img {
-  width: 70px;           /* ancho fijo */
-  height: 70px;          /* alto fijo */
-  object-fit: contain;   /* ajusta imagen sin deformar */
-}
-
-/* Modal (fondo oscuro) */
-.modal {
-  display: flex;                      /* organiza hijos */
-  position: fixed;                    /* ocupa toda la pantalla */
-  top: 0;                             /* desde arriba */
-  left: 0;                            /* desde la izquierda */
-  width: 100%;                        /* ancho completo */
-  height: 100%;                       /* alto completo */
-  background: rgba(0,0,0,0.5);        /* fondo oscuro semitransparente */
-  justify-content: center;            /* centra horizontalmente */
-  align-items: center;                /* centra verticalmente */
-  z-index: 100;                       /* encima de todo */
-}
-
-/* Contenido modal */
-.modal-contenido {
-  background: #e5ded3;        /* fondo claro */
-  padding: 20px;              /* espacio interno */
-  border-radius: 8px;         /* esquinas redondeadas */
-  border: solid 2px black;    /* borde negro */
-  width: 90%;                 /* ancho relativo */
-  max-width: 300px;           /* ancho máximo */
-  text-align: center;         /* centrado */
-  position: relative;         /* para ubicar el botón cerrar */
-}
-
-.img-modal {
-  max-width: 150px;    /* ancho máximo */
-  height: auto;        /* alto automático */
-  margin: 15px auto;   /* centrado con espacio */
-  display: block;      /* se comporta como bloque */
-}
-
-/* Botón cerrar modal */
-.cerrar {
-  position: absolute;  /* posición flotante dentro del modal */
-  top: 10px;           /* desde arriba */
-  right: 20px;         /* desde la derecha */
-  font-size: 24px;     /* tamaño grande */
-  cursor: pointer;     /* cursor de mano */
-}
-
-/* Métodos de pago */
 .payments {
-  display: flex;                /* usa flexbox */
-  flex-direction: column;       /* en columna */
-  gap: 12px;                    /* espacio entre botones */
-  text-align: center;           /* centrado */
-  padding: 8px 7px;             /* relleno interno */
-  margin: 30px auto;            /* margen vertical y centrado */
-  width: fit-content;           /* se ajusta al contenido */
-}
-
-h2 {
-  margin-top: 50px;             /* espacio superior */
-  text-align: center;           /* centrado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px auto;
+  width: 100%;
 }
 
 .pay-btn {
-  display: flex;                /* contenido en fila */
-  align-items: center;          /* alinea verticalmente */
-  justify-content: flex-start;  /* contenido alineado a la izquierda */
-  gap: 10px;                    /* espacio entre icono y texto */
-  width: 250px;                 /* ancho fijo */
-  margin: 0 auto;               /* centrado */
-  background: #E5DED3;          /* fondo claro */
-  border: none;                 /* sin borde */
-  padding: 15px;                /* espacio interno */
-  font-size: 16px;              /* tamaño de texto */
-  font-weight: bold;            /* texto en negrita */
-  border-radius: 50px;          /* forma redondeada */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* sombra */
-  cursor: pointer;              /* cursor de mano */
-  transition: background 0.2s, transform 0.2s; /* animaciones */
-}
-
-.pay-btn img {
-  width: 30px;           /* ancho icono */
-  height: 30px;          /* alto icono */
-  object-fit: contain;   /* ajusta icono sin deformar */
+  background: #F4E1B6;
+  border: none;
+  border-radius: 20px;
+  width: 150px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;   /* ✅ corregido */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
 }
 
 .pay-btn:hover {
-  background: #ffe0d6;   /* cambia color al pasar mouse */
-  transform: translateY(-2px); /* se levanta un poco */
+  background: #E5DED3;
+  transform: translateY(-2px);
+}
+
+.pay-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===================================================== */
+/* 🔹 MODAL DE MÉTODOS DE PAGO 🔹 */
+/* ===================================================== */
+
+.lista-productos-metodo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px;   /* modal pequeño */
+  overflow-y: auto;    /* scroll si hay muchos productos */
+}
+
+.lista-productos-metodo li {
+  background: #F4E1B6;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-producto-metodo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.info-producto-metodo {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* ===================================================== */
+/* 🔹 CARRUSEL DE PRODUCTOS 🔹 */
+/* ===================================================== */
+
+.products-carousel {
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: center; /* centra la imagen */
+}
+
+.products-carousel .carousel-item img {
+  max-height: 200px; /* más pequeño para móvil */
+  margin: 0 auto;    /* centra la imagen */
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.products-carousel .carousel-caption {
+  background: rgba(0,0,0,0.4);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 14px;
 }
