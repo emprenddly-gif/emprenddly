@@ -209,7 +209,7 @@ const guardarProducto = async () => {
         <div className="Menuinven">
           <h1 className="menu_inven">Menu</h1>
           <ul className="Inven">
-            <li><a href="http://localhost:5173/usuarios"><i className="fas fa-user"></i>Usuarios</a></li>
+ 
             <li><a href="http://localhost:5173/registroinventario"><i className="fas fa-clipboard-list"></i>Inventario</a></li>
             <li><a href="#"><i className="fas fa-cart-plus"></i>Registro De Ventas</a></li>
             <li><a href="http://localhost:5173/reporteventas"><i className="fas fa-chart-line"></i>Reporte De Ventas</a></li>

@@ -16,9 +16,8 @@ const Menu = () => {
       </div>
       <div className="Container">
         <div className="Botones">
-          <a href="http://localhost:5173/usuarios"><i className="fas fa-user"></i> Usuarios</a>
           <a href="http://localhost:5173/registroinventario"><i className="fas fa-clipboard-list"></i> Inventarios</a>
-          <a href="#"><i className="fas fa-cart-plus"></i> Registro de Ventas</a>
+          <a href="http://localhost:5173/registroventas"><i className="fas fa-cart-plus"></i> Registro de Ventas</a>
           <a href="http://localhost:5173/reporteventas"><i className="fas fa-chart-line"></i> Reporte de Ventas</a>
           <a href="http://localhost:5173/registrogastos"><i className="fas fa-wallet"></i> Registro de Gastos</a>
           <a href="http://localhost:5173/reportegastos"><i className="fas fa-file-invoice-dollar"></i> Reporte de Gastos</a>
