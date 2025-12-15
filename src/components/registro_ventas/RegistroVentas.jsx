@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./RegistroVentas.css";
-import Modal from "./components/Modal";
+import Modal from "../Modal";
 
 
 

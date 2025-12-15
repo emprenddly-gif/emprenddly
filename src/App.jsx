@@ -15,6 +15,8 @@ import RegistroGasto from "./components/RegistrGastos/RegistroGastos.jsx";
 import Login from "./components/login/Login.jsx";
 import Registro from "./components/registro/Registro.jsx";
 
+import RegistroVentas from "./components/registro_ventas/RegistroVentas.jsx";
+
 import Usuarios from "./components/usuarios/usuariosfrom"
 import ReporteVentas from "./components/ReportVentas/reporteventas";
 import Perfil from "./components/Perfil/perfil";
@@ -74,6 +76,9 @@ function App() {
 
         {/*Ajustes*/}
         <Route path="/ajustes" element={<Ajustes />} />
+
+        {/*Registros De Ventas*/}
+        <Route path="/registroventas" element={<RegistroVentas />} />
       </Routes>
     </Router>
   );
